@@ -1,0 +1,16 @@
+<h1>Boards</h1>
+
+<% @boards.each do |board| %>
+  <div class = "ui card">
+    <div class = "content">
+      <a class="header">
+        <h3><%= link_to board.title, board %></h3>
+      </a>
+    </div>
+  </div>
+<% end %>
+  
+
+
+
+

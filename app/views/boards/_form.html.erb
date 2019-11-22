@@ -1,0 +1,13 @@
+<%= form_with(model: @board, local: true, class: "ui form") do |f| %>
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title, class: "input" %>
+  </div>
+ <div class="field">
+   <%= f.label :description %>
+   <%= f.text_area :description, size: "10x10", class: "input" %>
+ </div>
+ 
+ <%= f.submit nil, class: "ui green button" %>
+ <%= link_to "Back", boards_path , class: "ui blue button inverted" %>
+<% end %>
