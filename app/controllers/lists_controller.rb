@@ -1,6 +1,8 @@
 class ListsController < ApplicationController
+  before_action :set_board
+
   def index
-    @lists = @board.topics
+    @lists = @board.lists
   end
 
   def show
@@ -11,4 +13,15 @@ class ListsController < ApplicationController
 
   def edit
   end
+
+  private
+   def set_board
+     @board = Board.find(params[:board_id]) 
+   end
+
 end
+
+
+
+
+

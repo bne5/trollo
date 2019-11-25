@@ -1,10 +1,14 @@
-<h1>Lists</h1>
+<h1><%= @board.title %>: Enrollments</h1>
+<%= link_to 'Add Enrollment', new_board_list_path(@board) %>
+<hr />
 
-<% @lists.each do |l
-ist| %>
-  <div>
-    <h3><%= link_to l
-  ist.title, l
-  ist %></h3>
-  </div>
-<% end %>
+<h2>Teacher</h2>
+<ul>
+  <% @lists.each do |list| %>
+    <li>
+      <%= list.item %>
+      <br />
+      <%= link_to 'Remove', board_list_path(@board, list), method: :delete %>
+    </li>
+  <% end %>
+</ul>
